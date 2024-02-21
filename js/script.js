@@ -1,5 +1,5 @@
 //selecting all required elements
-const start_btn = document.querySelector(".start_btn button");
+const start_btn = document.querySelector(".start_btn");
 const info_box = document.querySelector(".info_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
 const continue_btn = info_box.querySelector(".buttons .restart");
@@ -18,15 +18,15 @@ const audio = document.querySelector("#quiz-play");
 const quizResSound = document.querySelector("#sucess");
 const nextBtn = document.querySelector(".next_btn");
 
-start_btn.addEventListener("click", () => {
-  if (audio.paused) {
-    audio.volume = 0.2;
-    audio.play();
-  } else {
-    audio.pause();
-  }
-  //button.classList.add("fade");
-});
+// start_btn.addEventListener("click", () => {
+//   if (audio.paused) {
+//     audio.volume = 0.2;
+//     audio.play();
+//   } else {
+//     audio.pause();
+//   }
+//   //button.classList.add("fade");
+// });
 
 nextBtn.addEventListener('click' , ()=>{
     audio.currentTime = 0;
@@ -55,6 +55,12 @@ nextBtn.addEventListener('click' , ()=>{
 
 // if continueQuiz button clicked
 start_btn.onclick = ()=>{
+    if (audio.paused) {
+        audio.volume = 0.2;
+        audio.play();
+      } else {
+        audio.pause();
+      }
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.add("activeQuiz"); //show quiz box
     
@@ -81,7 +87,7 @@ restart_quiz.onclick = ()=>{
     quiz_box.classList.add("activeQuiz"); //show quiz box
     result_box.classList.remove("activeResult"); //hide result box
     timeValue = 15; 
-    que_count = 1;
+    que_count = 0;
     que_numb = 1;
     userScore = 0;
     widthValue = 0;

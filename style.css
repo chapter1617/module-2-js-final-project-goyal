@@ -8,15 +8,15 @@
 }
 
 body{
-    background: #007bff;
+    background: #721c24;
 }
 
 ::selection{
     color: #fff;
-    background: #007bff;
+    background: #721c24;
 }
 
-.start_btn,
+
 .info_box,
 .quiz_box,
 .result_box{
@@ -37,7 +37,7 @@ body{
     transform: translate(-50%, -50%) scale(1);
 }
 
-.start_btn button{
+/* .start_btn button{
     font-size: 25px;
     font-weight: 500;
     color: #007bff;
@@ -47,12 +47,12 @@ body{
     border-radius: 5px;
     background: #fff;
     cursor: pointer;
-}
+} */
 
 .info_box{
-    width: 540px;
+    width: 1000px;
     background: #fff;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
     pointer-events: none;
@@ -82,7 +82,7 @@ body{
 
 .info_box .info-list .info span{
     font-weight: 600;
-    color: #007bff;
+    color: #721c24;
 }
 .info_box .buttons{
     height: 60px;
@@ -103,14 +103,15 @@ body{
     border: none;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid #721c24;
+    background: #ffcccc;
     transition: all 0.3s ease;
 }
 
 .quiz_box{
-    width: 550px;
+    width: 800px;
     background: #fff;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
     pointer-events: none;
@@ -136,8 +137,8 @@ body{
 }
 
 .quiz_box header .timer{
-    color: #004085;
-    background: #cce5ff;
+    color: #721c24;
+    background: #ffe6ed;
     border: 1px solid #b8daff;
     height: 45px;
     padding: 0 8px;
@@ -173,7 +174,7 @@ body{
     bottom: 0px;
     left: 0px;
     height: 3px;
-    background: #007bff;
+    background: #e55260;
 }
 
 section{
@@ -192,8 +193,8 @@ section .option_list{
 }
 
 section .option_list .option{
-    background: aliceblue;
-    border: 1px solid #84c5fe;
+    background: #ebebeb;
+    border: 1px solid #6e6e6e;
     border-radius: 5px;
     padding: 8px 15px;
     font-size: 17px;
@@ -210,8 +211,8 @@ section .option_list .option:last-child{
 }
 
 section .option_list .option:hover{
-    color: #004085;
-    background: #cce5ff;
+    color: #290a4c;
+    background: #cdc4e3;
     border: 1px solid #b8daff;
 }
 
@@ -287,8 +288,8 @@ footer button{
     outline: none;
     color: #fff;
     border-radius: 5px;
-    background: #007bff;
-    border: 1px solid #007bff;
+    background: #af3b46;
+    border: 1px solid #af3b46;
     line-height: 10px;
     opacity: 0;
     pointer-events: none;
@@ -297,7 +298,7 @@ footer button{
 }
 
 footer button:hover{
-    background: #0263ca;
+    background: #af3b46;
 }
 
 footer button.show{
