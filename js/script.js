@@ -121,8 +121,7 @@ const bottom_ques_counter = document.querySelector("footer .total_que");
 // if Next Que button clicked
 next_btn.onclick = ()=>{
     //ques_num = getRandomInt(0,4);
-    
-    
+
     if(que_count < questions.length-1){ //if question count is less than total question length
         que_count++; //increment the que_count value
         que_numb++; //increment the que_numb value
@@ -158,7 +157,7 @@ function showQuestions(index){
     option_list.innerHTML = option_tag; //adding new div tag inside option_tag
     
     const option = option_list.querySelectorAll(".option");
-
+    console.log(option);
     // set onclick attribute to all available options
     for(i=0; i < option.length; i++){
         //quesNum = num ; 
@@ -172,7 +171,7 @@ let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 //if user clicked on option
 function optionSelected(answer){
-    //console.log(+answer +"answer---->num"+ num);
+    //console.log('option selected....' + answer );
     clearInterval(counter); //clear counter
     clearInterval(counterLine); //clear counterLine
     let userAns = answer.textContent; //getting user selected option
@@ -238,7 +237,7 @@ function showResult(){
         
     }
     else if(userScore >= 5 && userScore < 7){ // if user scored more than 1
-        let scoreTag = '<span>Good work, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>Well Played!, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
         if (audio.paused) {
             quizResSound.setAttribute('src','assets/goodresult.mp3');
